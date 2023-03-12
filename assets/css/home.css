@@ -1,0 +1,216 @@
+
+body{
+  font-family: sans-serif;
+ background-image: linear-gradient(-225deg, #000000 0%, #020f2f 48%, #000000 100%);
+ background-size: cover;
+ height: 100vh;
+ width: 100vw;
+ padding: 0;
+ box-sizing: border-box;
+ overflow-x: hidden;
+
+}
+
+body,html{
+  margin:0;
+  overflow-x: hidden;
+
+  }
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+.heading{
+  text-align: center;
+  margin: 2%;
+  color: grey;
+}
+
+.heading{
+  animation-name: textanimation;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 20s;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+input{
+  width: 17vw;
+  height: 2.5vw;
+  padding: 10px;
+  margin: 6px;
+  border-radius: 15px;
+  color: black;
+  border: 2px solid white;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all ease-in-out 0.1s;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::placeholder{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+  font-size: 12px;
+}
+input:hover{
+  box-shadow: 0px 0px 6px 3px white;
+}
+
+button{
+  width: 120px;
+  height: 40px;
+  margin-top: 5px;
+  font-size: 1rem;
+  background-image: linear-gradient(to right, #62362c 0%, #4f1f24 100%);
+  /* outline: none; */
+  outline: #041520;
+  border: none;
+  border:#6e625f;
+  font-weight: 500;
+  color: white;
+  border-radius: 18px;
+   font-family: Verdana,
+   Geneva,
+   Tahoma,
+   sans-serif;
+   transition: all ease-in-out 0.1s;  
+}
+
+button:hover{
+  box-shadow: 0px 0px 6px 3px white;
+  background-image: linear-gradient(-20deg, #041520 0%, #4e4376 100%);
+  color:white;
+}
+
+/* .list-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+} */
+
+.list-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+
+ul{
+  list-style: none;
+  padding: 0px;
+  margin: auto;
+  height: 67vh;
+  /* overflow-y: hidden; */
+  overflow-y: scroll;
+}
+
+ul::-webkit-scrollbar {
+  /* visibility: hidden; */
+  visibility: visible;
+}
+
+li{
+  display: flex;
+  flex-wrap: wrap;
+  width: 60vw;
+  background-image: linear-gradient(to right, #094250 0%, #092b41 100%);
+  justify-content: space-between;
+  /* opacity: 0.8; */
+  align-items: center;
+  margin: 8px;
+  opacity: 0.8;
+  border-radius: 20px;
+  padding: 10px;
+  transition:  box-shadow ease-in-out 0.1s;
+  font-weight: 700;
+  color: white;
+  font-style: italic;
+}
+
+
+li:hover{
+  box-shadow: 0px 0px 6px 3px white;
+  color: white;
+  opacity: 1;
+}
+
+
+
+
+
+.list-container ul li p{
+  display: inline-block;
+  /* background-color: aliceblue; */
+  
+}
+
+
+a{
+  padding: 5px;
+  /* transition: all ease-in-out 0.3s; */
+  animation: deleteButton;
+  animation-iteration-count: infinite;
+  animation-duration: 20s;
+  animation-direction: alternate;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  
+  
+  
+
+}
+
+@keyframes deleteButton{
+  0%{
+      color: rgb(255, 53, 53);
+  }
+
+  50%{
+      color: rgb(123, 112, 52)
+  }
+  10%{
+      color: rgb(214, 225, 199);
+  }
+}
+
+
+
+
+@keyframes textanimation{
+  0%{
+      color: white;
+  }
+
+  25%{
+      color: rgb(0, 255, 238);
+  }
+
+  50%{
+      color: #856e28;
+  }
+  
+
+  100%{
+      color: rgb(237, 241, 231);
+  }
+}

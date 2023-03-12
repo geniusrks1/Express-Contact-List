@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>
+    <%= title %>
+</title>
+   
+   <!--  Css file  -->
+<link rel="stylesheet" href="/css/home.css">
+<!-- Font Awesome Css  -->
+<script src="https://kit.fontawesome.com/a599ec7f58.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+
+        
+        <h1 class="heading">    
+            <i class="fa-regular fa-address-book"></i> 
+             My Contact List 
+        </h1>
+
+
+        <form action="/create-contact" method="POST">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="text" name="phone" placeholder="Phone No." required>
+            <button type="submit"> Add </button>
+        </form>
+
+
+
+        <div class="list-container">
+        <ul>
+         <% for(let i of contact_list) {%> 
+            <div class="contact"> 
+                <li>
+                    <p><%= i.name %></p>
+                    <p><%= i.phone %></p>
+
+                    <a href="/delete-contact/?id=<%= i.id %>">
+                        <i class="far fa-times-circle"></i>
+                        delete
+                    </a>
+
+                </li>
+            </div>
+         <%} %>
+
+        </ul>
+        </div>
+
+
+
+
+<script type="text/javascript" src="/js/home.js"> </script>
+    </body>
+</html>
